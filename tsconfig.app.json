@@ -19,10 +19,6 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-<<<<<<< Updated upstream
-    // "erasableSyntaxOnly": true,
-=======
->>>>>>> Stashed changes
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
