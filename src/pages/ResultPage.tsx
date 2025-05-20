@@ -237,7 +237,7 @@ export default function ResultPage() {
                       fill="#8884d8"
                       dataKey="value"
                     >
-                      {sentimentData.map((entry, index) => (
+                      {sentimentData.map((_, index) => (
                         <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                       ))}
                     </Pie>
@@ -258,7 +258,7 @@ export default function ResultPage() {
                     <YAxis />
                     <Tooltip />
                     <Bar dataKey="value" label={renderBarLabel}>
-                      {keywords.map((entry, index) => (
+                      {keywords.map((_, index) => (
                         <Cell key={`cell-${index}`} fill={index === 0 ? '#ef4444' : '#6366f1'} />
                       ))}
                     </Bar>
