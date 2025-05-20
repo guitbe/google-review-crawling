@@ -4,7 +4,7 @@ const WaveBackground = () => (
   <svg
     viewBox="0 0 900 600"
     width="100vw"
-    height="300"
+    height="180"
     preserveAspectRatio="none"
     style={{
       position: 'fixed',
@@ -13,7 +13,7 @@ const WaveBackground = () => (
       zIndex: 0,
       pointerEvents: 'none',
       minWidth: '100vw',
-      minHeight: '200px',
+      minHeight: '120px',
       display: 'block'
     }}
     xmlns="http://www.w3.org/2000/svg"

@@ -97,8 +97,8 @@ export default function ResultPage() {
 
   if (loading && !error && !result) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-neutral-100 px-4">
-        <div className="w-full max-w-lg p-8 bg-white rounded-2xl shadow-xl border border-neutral-200 flex flex-col items-center">
+      <div className="py-20 pb-80 flex justify-center">
+        <div className="w-full max-w-4xl p-8 bg-white rounded-2xl shadow-xl border border-neutral-200">
           <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-indigo-500 mb-6"></div>
           <h2 className="text-xl font-semibold text-neutral-800 mb-2 tracking-tight">리뷰 분석 중…</h2>
           <p className="text-neutral-500 mb-2">분석이 진행 중입니다. 잠시만 기다려 주세요.</p>
@@ -112,8 +112,8 @@ export default function ResultPage() {
 
   if (error && !result) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-neutral-100 px-4">
-        <div className="w-full max-w-lg p-8 bg-white rounded-2xl shadow-xl border border-neutral-200 flex flex-col items-center">
+      <div className="py-20 pb-80 flex justify-center">
+        <div className="w-full max-w-4xl p-8 bg-white rounded-2xl shadow-xl border border-neutral-200">
           <div className="text-3xl mb-4">⚠️</div>
           <h2 className="text-lg font-semibold text-neutral-800 mb-2">오류 발생</h2>
           <p className="text-neutral-500 mb-6">{error}</p>
@@ -205,7 +205,7 @@ export default function ResultPage() {
     };
 
     return (
-      <div className="min-h-screen flex items-center justify-center bg-neutral-100 px-4 py-8">
+      <div className="py-20 pb-80 flex justify-center">
         <div className="w-full max-w-4xl p-8 bg-white rounded-2xl shadow-xl border border-neutral-200">
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-2xl font-bold text-neutral-900 tracking-tight">리뷰 분석 결과</h2>

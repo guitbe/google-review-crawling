@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
 import WaveBackground from './WaveBackground';
+import BlurredMagnifier from './BlurredMagnifier';
+import ParticleBackground from './ParticleBackground';
 
 const UrlInputForm = () => {
   const navigate = useNavigate();
@@ -48,13 +50,11 @@ const UrlInputForm = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center px-4" style={{ position: 'relative', overflow: 'hidden' }}>
-      <WaveBackground />
-      <div className="w-full max-w-md p-8 bg-white rounded-2xl shadow-xl border border-neutral-200 flex flex-col items-center">
-        <h2 className="text-2xl font-bold text-neutral-900 mb-2 tracking-tight">구글 플레이 리뷰 요약</h2>
-        <p className="text-neutral-500 mb-6 text-center">
-          <span className="font-medium text-indigo-600">구글 플레이 스토어 앱 URL</span>을 입력하면<br />
-          리뷰 요약을 받아볼 수 있습니다.
-        </p>
+      <div className="w-full max-w-xl scale-110 p-12 bg-white rounded-2xl shadow-xl border border-neutral-200 flex flex-col items-center">
+        <img src="/charcter.svg" alt="캐릭터" className="mx-auto mb-6 w-32 h-32" />
+        <h2 className="text-3xl font-extrabold text-neutral-900 mb-2 tracking-tight">뷰글 플레이</h2>
+        <div className="text-lg font-semibold text-indigo-700 mb-2 text-center">알아서 핵심만 뽑아주는 똑똑한 리뷰 리더</div>
+        <div className="text-sm text-neutral-500 mb-8 text-center">구글 플레이 스토어 앱 URL을 입력하면<br />리뷰 요약을 받아볼 수 있습니다.</div>
         <form className="w-full" onSubmit={handleSubmit}>
           <div className="relative mb-4">
             <span className="absolute left-3 top-1/2 -translate-y-1/2 text-indigo-500">
