@@ -1,5 +1,3 @@
-import React from 'react';
-
 const WaveBackground = () => (
   <svg
     viewBox="0 0 900 600"

@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
-import { FaThumbsUp, FaThumbsDown } from 'react-icons/fa';
+import { FaThumbsUp } from 'react-icons/fa';
 
 const AIRTABLE_API_URL = 'https://api.airtable.com/v0/app18dJ8S2IY7gUrX/분석';
 const AIRTABLE_API_KEY = 'patgnw1SgMlOR9HSD.86a5064a77411831753a49f58593a95168b6abd2bacf5f3c986f8eccdd1b6cba';
