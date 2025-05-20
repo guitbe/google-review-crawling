@@ -1,9 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
-import WaveBackground from './WaveBackground';
-import BlurredMagnifier from './BlurredMagnifier';
-import ParticleBackground from './ParticleBackground';
 
 const UrlInputForm = () => {
   const navigate = useNavigate();
