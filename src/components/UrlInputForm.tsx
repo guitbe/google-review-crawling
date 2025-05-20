@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FaSearch } from 'react-icons/fa';
+import WaveBackground from './WaveBackground';
 
 const UrlInputForm = () => {
   const navigate = useNavigate();
@@ -45,7 +47,8 @@ const UrlInputForm = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-neutral-100 px-4">
+    <div className="min-h-screen flex items-center justify-center px-4" style={{ position: 'relative', overflow: 'hidden' }}>
+      <WaveBackground />
       <div className="w-full max-w-md p-8 bg-white rounded-2xl shadow-xl border border-neutral-200 flex flex-col items-center">
         <h2 className="text-2xl font-bold text-neutral-900 mb-2 tracking-tight">구글 플레이 리뷰 요약</h2>
         <p className="text-neutral-500 mb-6 text-center">
@@ -53,15 +56,20 @@ const UrlInputForm = () => {
           리뷰 요약을 받아볼 수 있습니다.
         </p>
         <form className="w-full" onSubmit={handleSubmit}>
-          <input
-            type="url"
-            required
-            value={url}
-            onChange={(e) => setUrl(e.target.value)}
-            className="w-full px-4 py-3 mb-4 border border-neutral-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-base bg-neutral-50 placeholder-neutral-400 transition"
-            placeholder="예: https://play.google.com/store/apps/details?id=..."
-            disabled={isLoading}
-          />
+          <div className="relative mb-4">
+            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-indigo-500">
+              <FaSearch className="w-5 h-5" />
+            </span>
+            <input
+              type="url"
+              required
+              value={url}
+              onChange={(e) => setUrl(e.target.value)}
+              className="w-full pl-10 pr-4 py-3 border border-neutral-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-base bg-neutral-50 placeholder-neutral-400 transition"
+              placeholder="예: https://play.google.com/store/apps/details?id=..."
+              disabled={isLoading}
+            />
+          </div>
           <button
             type="submit"
             disabled={isLoading}

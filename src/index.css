@@ -70,3 +70,22 @@ html, body, #root {
   margin: 0;
   padding: 0;
 }
+
+body {
+  background: #0a1124;
+}
+
+/* 파도 배경 애니메이션 */
+.wave-bg {
+  animation: waveMove 8s linear infinite;
+  background-position: 0 100%;
+}
+
+@keyframes waveMove {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 400px;
+  }
+}
